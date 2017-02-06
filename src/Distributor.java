@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Distributor implements ConvenienceStore {
 
-    protected ArrayList<Product> products = new ArrayList<Product>();
+    private ArrayList<Product> products = new ArrayList<Product>();
 
     public Distributor(ArrayList<Product> products) {
         this.products.addAll( products );
@@ -16,7 +16,7 @@ public class Distributor implements ConvenienceStore {
     public boolean sell(Product sellProduct) {
 
         System.out.println("----------------------------------------------------------------------");
-        System.out.println("Demande de vente du produit "+sellProduct.getName()+" produit(s)." );
+        System.out.println("Demande de vente du produit "+sellProduct.getName() );
 
         for (Product prod:products) {
 

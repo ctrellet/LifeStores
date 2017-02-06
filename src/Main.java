@@ -84,5 +84,56 @@ public class Main {
 
         System.out.println( aDistributor.toString() );
 
+
+
+        System.out.println("======================================================================");
+        System.out.println("Instanciation du Magasin avec la liste des produits et l'employé");
+
+        FamilyMart aFamilyMart = new FamilyMart(listProducts,1);
+
+
+        System.out.println("======================================================================");
+        System.out.println("Statut du stock :");
+
+        System.out.println("----------------------------------------------------------------------");
+        if(aFamilyMart.filled()){
+            System.out.println("Plein." );
+        }else{
+            System.out.println("Non plein." );
+        };
+
+
+        System.out.println("======================================================================");
+        System.out.println("Tentative de vente d'un produit");
+
+        if(aFamilyMart.sell(new Product("pocky"))){
+            System.out.println("Vente réussie." );
+        }else{
+            System.out.println("Vente avortée." );
+        };
+
+
+        System.out.println("======================================================================");
+        System.out.println("Départ de l'employé :");
+
+        aFamilyMart.setEmployee(0);
+
+
+        System.out.println("======================================================================");
+        System.out.println("Tentative de vente d'un produit");
+
+        if(aFamilyMart.sell(new Product("evian"))){
+            System.out.println("Vente réussie." );
+        }else{
+            System.out.println("Vente avortée." );
+        };
+
+
+        System.out.println("======================================================================");
+        System.out.println("Inventaire du magasin" );
+        System.out.println("----------------------------------------------------------------------");
+
+        System.out.println( aFamilyMart.toString() );
+
     }
 }
